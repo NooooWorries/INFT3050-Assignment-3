@@ -1,0 +1,40 @@
+﻿table#header
+{
+    width: 100%;
+}
+
+div#userInfo
+{
+    text-align:right;
+    font-size:small;
+}
+
+div#background
+{
+    position:fixed; 
+    top:0; 
+    left:0; 
+    bottom:0; 
+    right:0; 
+    z-index:-1; 
+}
+
+div#background > img
+{
+    height:100%; 
+    width:100%; 
+    border:0; 
+}
+
+.MainForm
+{
+    width: 80%;
+    margin:0px auto;
+}
+
+.MainTitle
+{
+    text-align: center;
+    font-size:x-large;
+    font-family:Arial;
+}

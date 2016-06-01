@@ -1,0 +1,30 @@
+﻿table#header
+{
+    width: 100%;
+}
+
+.ErrorForm
+{
+    width: 50%;
+    margin:0px auto;
+}
+
+.ErrorTitle
+{
+    text-align: center;
+    font-size:x-large;
+    font-family:Arial;
+}
+
+div#error
+{
+    text-align:right;
+    font-family:Arial;
+    font-size:xx-large;
+    color:red;
+}
+
+body 
+{
+    background:url(/images/background/ErrorBG.jpg) fixed;
+}

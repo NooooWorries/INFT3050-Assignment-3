@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserLayer", "BattlingElementalTitans\UserLayer.csproj", "{5BC65D76-E644-4936-A78C-E3C46023BF7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{1E2577D3-2551-4E8A-92D3-AFFC8AE3F720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLayer\BusinessLogicLayer.csproj", "{D170AB2F-F7B4-43FC-8525-23877141C48C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjectLayer", "BusinessObjectLayer\BusinessObjectLayer.csproj", "{D31FE640-6D01-4227-89C4-62D826C392D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BC65D76-E644-4936-A78C-E3C46023BF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC65D76-E644-4936-A78C-E3C46023BF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC65D76-E644-4936-A78C-E3C46023BF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC65D76-E644-4936-A78C-E3C46023BF7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E2577D3-2551-4E8A-92D3-AFFC8AE3F720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E2577D3-2551-4E8A-92D3-AFFC8AE3F720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E2577D3-2551-4E8A-92D3-AFFC8AE3F720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E2577D3-2551-4E8A-92D3-AFFC8AE3F720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D170AB2F-F7B4-43FC-8525-23877141C48C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D170AB2F-F7B4-43FC-8525-23877141C48C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D170AB2F-F7B4-43FC-8525-23877141C48C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D170AB2F-F7B4-43FC-8525-23877141C48C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D31FE640-6D01-4227-89C4-62D826C392D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D31FE640-6D01-4227-89C4-62D826C392D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D31FE640-6D01-4227-89C4-62D826C392D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D31FE640-6D01-4227-89C4-62D826C392D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

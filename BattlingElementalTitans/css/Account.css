@@ -1,0 +1,126 @@
+﻿/*
+    Popup box style
+    Reference source: http://stackoverflow.com/questions/20064226/how-to-create-a-pop-up-div-on-mouse-over-and-stay-when-click
+*/
+.popbox {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    width: 100px;
+    padding: 10px;
+    background: #EEEFEB;
+    color: #000000;
+    border: 1px solid #4D4F53;
+    margin: 0px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+    box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+}
+
+table#header
+{
+    width: 100%;
+}
+div#BG
+{
+    position:fixed; 
+    top:0; 
+    left:0; 
+    bottom:0; 
+    right:0; 
+    z-index:-1; 
+}
+
+div#BG> img
+{
+    height:100%; 
+    width:100%; 
+    border:0; 
+}
+div#account
+{
+    text-align:right;
+    font-family:Arial;
+    font-size:xx-large;
+    color:gray;
+}
+
+.AccountForm
+{
+    width: 50%;
+    margin:0px auto;
+}
+
+.AccountTitle
+{
+    text-align: center;
+    font-size:x-large;
+    font-family:Arial;
+}
+
+td#ForgotTitle
+{
+    text-align: center;
+    font-size:x-large;
+    font-family:Arial;
+}
+
+td#tdForgotPassword
+{
+    text-align: right;
+}
+
+.tdSubmit
+{
+    text-align:center;
+}
+.description
+{
+    font-size: small;
+    text-align:center;
+}
+
+.Popup
+{
+    background-color: #FFFFFF;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 400px;
+    height: 350px;
+}
+
+.textbox
+{
+     text-align: right;
+}
+
+.Background
+{
+    background-color: Black;
+    filter: alpha(opacity=90);
+    opacity: 0.8;
+}
+
+body 
+{
+    background:url(/images/background/MainBG.jpg) fixed;
+}
+
+.pic_text
+{
+    color:Red;
+}
+.pic_label 
+{ 
+    color:Gray; 
+    margin-top:5px; 
+    margin-bottom:5px;
+
+}
+.pic_image 
+{
+     margin:5px;
+}
+
