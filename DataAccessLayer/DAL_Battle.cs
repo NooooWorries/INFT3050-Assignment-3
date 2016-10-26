@@ -47,7 +47,7 @@ namespace DataAccessLayer
             using (SqlConnection con = new SqlConnection(ConnectionString.connectionString))
             {
                 con.Open();
-                string queryString = "SELECT titanName, enemyTitanName, result, date FROM tblBattle b where username ='" + userDetails.Username + "'";
+                string queryString = "SELECT DISTINCT titanName, enemyTitanName, result, date FROM tblBattle b where username ='" + userDetails.Username + "'";
                 SqlCommand cmd = new SqlCommand(queryString, con);
                 SqlDataAdapter adap = new SqlDataAdapter(cmd);
                 adap.Fill(dataSet);

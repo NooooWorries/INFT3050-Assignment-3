@@ -24,7 +24,7 @@ namespace DataAccessLayer
                 cmd.Parameters.AddWithValue("@a", regDetails.Username);
                 cmd.Parameters.AddWithValue("@b", regDetails.Password);
                 cmd.Parameters.AddWithValue("@c", regDetails.ParentsEmail);
-                cmd.Parameters.AddWithValue("@d", 500);
+                cmd.Parameters.AddWithValue("@d", 100);
                 cmd.Parameters.AddWithValue("@e", 0);
                 cmd.Parameters.AddWithValue("@f", "false");
                 cmd.Parameters.AddWithValue("@g", regDetails.ActivateCode);
@@ -33,7 +33,7 @@ namespace DataAccessLayer
                 cmd.Parameters.AddWithValue("@j", regDetails.Anonymous);
                 cmd.Parameters.AddWithValue("@k", regDetails.FirstName);
                 cmd.Parameters.AddWithValue("@l", 0);
-                string startDate = DateTime.Now.ToString(); ;     
+                string startDate = DateTime.Now.AddDays(-1).ToString(); ;     
                 cmd.Parameters.AddWithValue("@m", startDate);
                 cmd.Parameters.AddWithValue("@n", 0);
                 return cmd.ExecuteNonQuery().ToString();
@@ -45,6 +45,30 @@ namespace DataAccessLayer
             finally
             {
                 cmd.Dispose();
+                con.Close();
+                con.Dispose();
+            }
+        }
+
+        public int duplicateUsername(BO_User userDetails)
+        {
+            // Validate whether the user name is exist
+            SqlConnection con = new SqlConnection(ConnectionString.connectionString);
+            con.Open();
+            try
+            {
+                string queryString = "SELECT COUNT(*) FROM tblUser WHERE username = '" +
+                                                  userDetails.Username + "'";
+                SqlCommand cmd = new SqlCommand(queryString, con);
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
                 con.Close();
                 con.Dispose();
             }
@@ -87,6 +111,75 @@ namespace DataAccessLayer
             try
             {
                 string queryString = "UPDATE tblUser SET activateStatus = 'true' WHERE username = '" + activateDetails.Username + "'";
+                SqlCommand cmd = new SqlCommand(queryString, con);
+                // If success, return 1 else return 0
+                int count = cmd.ExecuteNonQuery();
+                return count;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+        }
+
+        public int firstName_update(BO_User activateDetails)
+        {
+            SqlConnection con = new SqlConnection(ConnectionString.connectionString);
+            con.Open();
+            try
+            {
+                string queryString = "UPDATE tblUser SET firstName = '" + activateDetails.FirstName +"' WHERE username = '" + activateDetails.Username + "'";
+                SqlCommand cmd = new SqlCommand(queryString, con);
+                // If success, return 1 else return 0
+                int count = cmd.ExecuteNonQuery();
+                return count;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+        }
+
+        public int password_update(BO_User activateDetails)
+        {
+            SqlConnection con = new SqlConnection(ConnectionString.connectionString);
+            con.Open();
+            try
+            {
+                string queryString = "UPDATE tblUser SET password = '" + activateDetails.Password + "' WHERE username = '" + activateDetails.Username + "'";
+                SqlCommand cmd = new SqlCommand(queryString, con);
+                // If success, return 1 else return 0
+                int count = cmd.ExecuteNonQuery();
+                return count;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+        }
+
+        public int screenName_update(BO_User activateDetails)
+        {
+            SqlConnection con = new SqlConnection(ConnectionString.connectionString);
+            con.Open();
+            try
+            {
+                string queryString = "UPDATE tblUser SET screenName = '" + activateDetails.ScreenName + "' WHERE username = '" + activateDetails.Username + "'";
                 SqlCommand cmd = new SqlCommand(queryString, con);
                 // If success, return 1 else return 0
                 int count = cmd.ExecuteNonQuery();
@@ -505,6 +598,19 @@ namespace DataAccessLayer
                 con.Dispose();
             }
         }
-        
+        public DataSet getProfile(BO_User userDetails)
+        {
+            // Get user details and store in a dataset
+            DataSet dataSet = new DataSet();
+            using (SqlConnection con = new SqlConnection(ConnectionString.connectionString))
+            {
+                con.Open();
+                string queryString = "SELECT screenName, firstName, password FROM tblUser WHERE username ='" +userDetails.Username + "'";
+                SqlCommand cmd = new SqlCommand(queryString, con);
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                adap.Fill(dataSet);
+            };
+            return dataSet;
+        }
     }
 }

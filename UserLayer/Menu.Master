@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Menu.master.cs" Inherits="BattlingElementalTitans.Menu" %>
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>B.E.T.T.E.R</title>
+    <link rel="stylesheet" type="text/css" href="css/Main.css" /> 
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 7%;
+        }
+        .auto-style4 {
+            width: 200px;
+        }
+        .auto-style16 {
+            color: #000000;
+        }
+
+   body {background:url(/images/background/MainBG.jpg) fixed;}
+
+        .auto-style17 {
+            text-align: right;
+            font-size:medium;
+        }
+        .auto-style8 {
+            width: 1127px;
+        }
+
+        h3 {text-align: center}
+        .align {text-align: center}
+        p {text-align: center}
+        
+    </style>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+            <div id="BG"></div> 
+    <table id ="header">
+            <tr>
+                <td>
+                    <img alt="logo" src="images/logo.png" /></td>
+                <td class="auto-style8"><div id ="userInfo">
+                    <asp:ImageButton ID="imgProfilePicture" runat="server" Height="100px" OnClick="imgProfilePicture_Click" Width="100px" />
+                    </div></td>
+                <td class="auto-style17"><span class="auto-style6">Click profile picture to upload a new one.<br />
+                    Player:</span><asp:Label ID="lblUsername" runat="server" CssClass="auto-style6"></asp:Label>
+                    <br />
+                    Hello,
+                    <asp:Label ID="lblScreenName" runat="server"></asp:Label>
+                    !
+                    <br class="auto-style16" />
+                    <a href="Logout.aspx">Logout</a></td>
+            </tr>
+        </table>
+    
+
+    <table class="auto-style1">
+        <tr>
+            <td class="auto-style2"><div id="dlmenu" class="auto-style4">
+                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/button/btnMenu.png" OnClick="ImageButton1_Click" />
+                <br />   
+                <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/images/button/btnFight.png" OnClick="ImageButton2_Click" />
+                <br />
+                <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/images/button/btnBattleHistory.png" OnClick="ImageButton3_Click" />
+                <br />
+                <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/images/button/btnCreateCharacter.png" OnClick="ImageButton4_Click" />
+                <br />
+                <asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/images/button/btnManageCharacter.png" OnClick="ImageButton5_Click" />
+                <br />  
+                <asp:ImageButton ID="ImageButton6" runat="server" ImageUrl="~/images/button/btnHallOfFame.png" OnClick="ImageButton6_Click" />
+                <br />
+                <asp:ImageButton ID="ImageButton7" runat="server" ImageUrl="~/images/button/btnUploadExercise.png" OnClick="ImageButton7_Click" />
+                <br />
+                <asp:ImageButton ID="ImageButton8" runat="server" ImageUrl="~/images/button/btnManageExercisePoints.png" OnClick="ImageButton8_Click" />
+                <br />
+                 </div>
+            </td>
+            <td id ="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
+

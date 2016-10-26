@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserLayer", "BattlingElementalTitans\UserLayer.csproj", "{5BC65D76-E644-4936-A78C-E3C46023BF7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserLayer", "UserLayer\UserLayer.csproj", "{5BC65D76-E644-4936-A78C-E3C46023BF7D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{1E2577D3-2551-4E8A-92D3-AFFC8AE3F720}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLayer\BusinessLogicLayer.csproj", "{D170AB2F-F7B4-43FC-8525-23877141C48C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{D170AB2F-F7B4-43FC-8525-23877141C48C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjectLayer", "BusinessObjectLayer\BusinessObjectLayer.csproj", "{D31FE640-6D01-4227-89C4-62D826C392D4}"
 EndProject

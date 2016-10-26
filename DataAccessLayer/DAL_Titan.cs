@@ -315,6 +315,30 @@ namespace DataAccessLayer
             }
         }
 
+        public int battles(BO_Titan titanDetails)
+        {
+            // Get battle count
+            SqlConnection con = new SqlConnection(ConnectionString.connectionString);
+            con.Open();
+            try
+            {
+                string queryString = "SELECT battles FROM tblTitan WHERE username = '" +
+                     titanDetails.Username + "' and titanName = '" + titanDetails.TitanName + "'";
+                SqlCommand cmd = new SqlCommand(queryString, con);
+                int exp = Convert.ToInt32(cmd.ExecuteScalar());
+                return exp;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+        }
+
         public DataSet rivalList(BO_Titan titanDetails)
         {
             // Get the rival list
@@ -420,6 +444,31 @@ namespace DataAccessLayer
                 // If success, return 1 else return 0
                 int result = Convert.ToInt32(cmd.ExecuteScalar());
                 return result;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+        }
+
+        public int updateBattle(BO_Titan titanDetails)
+        {
+            // Change the battle count of a specific titan
+            SqlConnection con = new SqlConnection(ConnectionString.connectionString);
+            con.Open();
+            try
+            {
+                string queryString = "UPDATE tblTitan SET battles = '" + titanDetails.Battles + "' WHERE username = '" +
+                                     titanDetails.Username + "' and titanName = '" + titanDetails.TitanName + "'";
+                SqlCommand cmd = new SqlCommand(queryString, con);
+                // If success, return 1 else return '
+                int count = cmd.ExecuteNonQuery();
+                return count;
             }
             catch (Exception ex)
             {

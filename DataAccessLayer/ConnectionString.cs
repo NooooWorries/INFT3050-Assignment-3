@@ -8,6 +8,6 @@ namespace DataAccessLayer
 {
     public class ConnectionString
     {
-        public static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename= \"\\\\Mac\\Home\\Documents\\Visual Studio 2015\\Projects\\BattlingElementalTitans\\BETTER.mdf\";Integrated Security=True;Connect Timeout=30";
+        public static string connectionString = "data source=localhost;initial catalog=C3218124C3198416;integrated security=true";
     }
 }
